@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     var sobre: String? = null
-    val cargo: String? = null
+    var cargo: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CargoActivity::class.java)
             intent.putExtra(CargoActivity.EXTRA_CARGO, cargo)
 
-            startActivityForResult(intent, RESQUEST_CARGO)
+            startActivityForResult(intent, REQUEST_CARGO)
         }
 
         //Checa se tem uma instancia salva, se tiver coloca o texto salvo como o anterior
@@ -46,9 +46,20 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
+        //Se o REQUEST(1) for igual ao requestCode passa para o text_sobrenome o
+        //sobre(sobrenome) selecionado na NomeActivity
         if(resultCode == Activity.RESULT_OK && requestCode == REQUEST_SOBRE){
             sobre = data?.getStringExtra(NomeActivity.EXTRA_RESULT)
+
             text_sobrenome.text = sobre
+        }
+
+        //Se o REQUEST(2) for igual ao requestCode passa para o text_sobrenome o
+        //sobre(sobrenome) selecionado na NomeActivity
+        if(resultCode == Activity.RESULT_OK && requestCode == REQUEST_CARGO){
+            cargo = data?.getStringExtra(CargoActivity.EXTRA_RESULT)
+
+            text_cargo.text = cargo
         }
     }
 
@@ -62,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         private const val REQUEST_SOBRE = 1
         private const val EXTRA_SOBRE = "estado"
 
-        private const val RESQUEST_CARGO = 1
+        private const val REQUEST_CARGO = 2
         private const val EXTRA_CARGO = "cargo"
     }
 }
