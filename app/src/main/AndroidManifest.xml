@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Treino01">
         <activity
+            android:name=".LocalActivity"
+            android:exported="false" />
+        <activity
             android:name=".CargoActivity"
             android:exported="false" />
         <activity
