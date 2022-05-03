@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Textviews de nome-->
+    <TextView
+        android:id="@+id/text_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_nome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/text_sobrenome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/text_nome"
+        app:layout_constraintBottom_toBottomOf="@id/text_nome"
+        android:textSize="30sp"
+        android:layout_marginStart="10dp"/>
+
+    <!--Textviews de profissao-->
+    <TextView
+        android:id="@+id/text_prof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_profissao"
+        app:layout_constraintTop_toBottomOf="@id/text_nome"
+        app:layout_constraintStart_toStartOf="@id/text_nome"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/text_cargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/text_prof"
+        app:layout_constraintBottom_toBottomOf="@id/text_prof"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"/>
+
+    <!--Textviews de cidade-->
+    <TextView
+        android:id="@+id/text_cidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_cidade"
+        app:layout_constraintTop_toBottomOf="@id/text_prof"
+        app:layout_constraintStart_toStartOf="@id/text_prof"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/text_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/text_cidade"
+        app:layout_constraintBottom_toBottomOf="@id/text_cidade"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"/>
+
+    <!--Botões para fazer alterações-->
+    <Button
+        android:id="@+id/button_nome"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_nome"
+        app:layout_constraintTop_toBottomOf="@id/text_cidade"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        android:id="@+id/button_cargo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_cargo"
+        app:layout_constraintTop_toBottomOf="@id/button_nome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/button_cidade"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_local"
+        app:layout_constraintTop_toBottomOf="@id/button_cargo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

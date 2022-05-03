@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Curriculo</string>
+
+    <string name="text_nome">Helvio</string>
+
+    <string name="text_profissao">Profissão</string>
+
+    <string name="text_cidade">Cidade</string>
+
+    <string name="button_nome">Mudar sobrenome</string>
+    <string name="button_cargo">Mudar cargo</string>
+    <string name="button_local">Mudar cidade</string>
+
+    <string-array name="sobrenomes">
+        <item>Siqueira</item>
+        <item>Vilhena</item>
+    </string-array>
+
+    <string-array name="cargos">
+        <item>Estudante</item>
+        <item>Programador</item>
+        <item>Analista</item>
+        <item>Analista de ROI</item>
+    </string-array>
+
+    <string-array name="locais">
+        <item>Caxias</item>
+        <item>São Luis</item>
+        <item>Teresina</item>
+        <item>Lodrina</item>
+        <item>Codó</item>
+    </string-array>
+
+</resources>
