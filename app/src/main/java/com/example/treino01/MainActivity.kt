@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     var sobre: String? = null
+    val cargo: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,13 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(NomeActivity.EXTRA_SOBRE, sobre)
 
             startActivityForResult(intent, REQUEST_SOBRE)
+        }
+
+        button_cargo.setOnClickListener {
+            val intent = Intent(this, CargoActivity::class.java)
+            intent.putExtra(CargoActivity.EXTRA_CARGO, cargo)
+
+            startActivityForResult(intent, RESQUEST_CARGO)
         }
 
         //Checa se tem uma instancia salva, se tiver coloca o texto salvo como o anterior
@@ -53,5 +61,8 @@ class MainActivity : AppCompatActivity() {
     companion object{
         private const val REQUEST_SOBRE = 1
         private const val EXTRA_SOBRE = "estado"
+
+        private const val RESQUEST_CARGO = 1
+        private const val EXTRA_CARGO = "cargo"
     }
 }

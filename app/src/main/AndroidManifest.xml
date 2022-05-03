@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Treino01">
         <activity
-            android:name=".NomeActivity"
-            android:label=""
+            android:name=".CargoActivity"
             android:exported="false" />
+        <activity
+            android:name=".NomeActivity"
+            android:exported="false"
+            android:label="" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
