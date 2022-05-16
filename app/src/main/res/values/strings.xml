@@ -20,7 +20,6 @@
         <item>Estudante</item>
         <item>Programador</item>
         <item>Analista</item>
-        <item>Analista de ROI</item>
     </string-array>
 
     <string-array name="locais">
@@ -28,7 +27,6 @@
         <item>São Luis</item>
         <item>Teresina</item>
         <item>Lodrina</item>
-        <item>Codó</item>
     </string-array>
 
 </resources>
